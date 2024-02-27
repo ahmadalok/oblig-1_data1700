@@ -24,6 +24,9 @@ function slettAlleBilletter() {
     displayTickets();
 }
 
+
+
+// used to showing the tickets that have been bought,
 function displayTickets() {
     const ticketList = document.getElementById('ticketList');
     ticketList.innerHTML = '';
