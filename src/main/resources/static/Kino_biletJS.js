@@ -11,3 +11,25 @@ function kjopBillett(){
             telefonnr: form.telefonnr.value,
             epost: form.epost.value
         };
+        tickets.push(ticket);
+        form.reset();
+        displayTickets();
+    } else {
+        alert('Vennligst fyll ut alle feltene med gyldig informasjon.');
+    }
+}
+
+function slettAlleBilletter() {
+    tickets = [];
+    displayTickets();
+}
+
+function displayTickets() {
+    const ticketList = document.getElementById('ticketList');
+    ticketList.innerHTML = '';
+    tickets.forEach(function(ticket) {
+        const ticketItem = document.createElement('li');
+        ticketItem.textContent = `Film: ${ticket.film}, Antall: ${ticket.antall}, Navn: ${ticket.fornavn} ${ticket.etternavn}, Telefon: ${ticket.telefonnr}, Epost: ${ticket.epost}`;
+        ticketList.appendChild(ticketItem);
+    });
+}
