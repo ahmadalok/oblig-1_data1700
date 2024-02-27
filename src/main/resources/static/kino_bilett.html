@@ -18,3 +18,24 @@
                     <option value="">The matrix 5</option>
 
                 </select>
+            </td></tr>
+         <tr><td>Antall:</td>
+            <td><input type="number" id="antall" name="antall" required></td></tr>
+         <tr><td>Fornavn:</td>
+            <td><input type="text" id="fornavn" name="fornavn" required></td></tr>
+         <tr><td>Etternavn:</td>
+            <td><input type="text" id="etternavn" name="etternavn" required></td></tr>
+         <tr><td>Telefonnr:</td>
+            <td><input type="tel" id="telefonnr" name="telefonnr" required pattern="[0-9]{8}"></td></tr>
+         <tr><td>Epost:</td>
+            <td><input type="email" id="epost" name="epost" required></td></tr>
+    </table>
+    <button type="button" onclick="kjopBillett()">Kjøp billett</button>
+    <button type="button" onclick="slettAlleBilletter()">Slett alle billettene</button>
+</form>
+<h2>Alle billetter</h2>
+<ul id="ticketList"></ul>
+
+</body>
+</html>
+
